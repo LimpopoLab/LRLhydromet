@@ -1,3 +1,4 @@
+#' @export
 medike <- function() {
       
       # Medike Nature Preserve
