@@ -18,7 +18,37 @@ More information is available on [Tidyverse](https://www.tidyverse.org/) and [RC
 ## Commands  
 - medike() # Medike Nature Preserve  
 
-## More Information  
+## Output  
+The output of the data commands are in the form:
+|Variable|Unit|Notes|
+|---|---|---|
+|year||Local time|
+|mont||Local time|
+|dayn||Local time|
+|hour||Local time|
+|minu||Local time|
+|prcp|mm|
+|srad|W/m/m|
+|temp|deg. C|
+|rhmd|%|
+|aprs|kPa|
+|wspd|m/s|
+|wdir|deg.|
+|rivs|m|
+|wtmp|deg. C|
+|cond|uS/cm|
+|trbd|NTU|
+|loc.dt||Local date-time number+|
+|utc.dt||UTC date-time number+|
+|loc.dy||Local day number+|
+|met.dy||Local day number+|
+|hydro.yr||Hydrologic year++|
+|hydro.mo||Hydrologic month++|
+|---|---|---|
++ date-time is number of seconds from 01 Jan 1970, 00:00, in either local time (SAST) or universal coordinated time (UTC).  
+++ hydrologic year begins, in the southern hemisphere, in August, the first hydrologic month, and is labeled by the calendar month in which it ends.  
+
+## Geographical Information  
 The map of the locations is available at [www.duq.edu/limpopo](https://www.duq.edu/academics/schools/natural-and-environmental-sciences/academics/departments-and-programs/environmental-science-and-environmental-science-and-management/limpopo-resilience-lab/data) under data.  
 
 ## License  
