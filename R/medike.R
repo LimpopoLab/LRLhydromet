@@ -39,5 +39,6 @@ medike <- function() {
       }
       
       data <- cbind(data, loc.dt, utc.dt, loc.dy, met.dy, hydro.yr, hydro.mo)
+      return(data)
       
 }
