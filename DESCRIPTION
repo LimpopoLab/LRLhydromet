@@ -4,7 +4,7 @@ Version: 0.0.0.9000
 Authors@R: 
     person(given = "David",
            family = "Kahler",
-           role = c("PI),
+           role = c("PI"),
            email = "kahlerd@duq.edu",
            comment = c(ORCID = "0000-0002-8941-6402"))
 Description: This package imports data from the Limpopo Resilience Lab Hydrometeorological Network from data.usaid.gov.  The data are processed and exported to a data frame for use.  Additional commands to process daily data are also available.
