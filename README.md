@@ -27,17 +27,17 @@ The output of the data commands are in the form:
 |dayn||Local time|
 |hour||Local time|
 |minu||Local time|
-|prcp|mm|
-|srad|W/m/m|
-|temp|deg. C|
-|rhmd|%|
-|aprs|kPa|
-|wspd|m/s|
-|wdir|deg.|
-|rivs|m|
-|wtmp|deg. C|
-|cond|uS/cm|
-|trbd|NTU|
+|prcp|mm||
+|srad|W/m/m||
+|temp|deg. C||
+|rhmd|%||
+|aprs|kPa||
+|wspd|m/s||
+|wdir|deg.||
+|rivs|m|where available|
+|wtmp|deg. C|where available|
+|cond|uS/cm|where available|
+|trbd|NTU|where available|
 |loc.dt||Local date-time number^|
 |utc.dt||UTC date-time number^|
 |loc.dy||Local day number+|
