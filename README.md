@@ -43,8 +43,8 @@ The output of the data commands are in the form:
 |loc.dy||Local day number+|
 |met.dy||Local day number+|
 |hydro.yr||Hydrologic year++|
-|hydro.mo||Hydrologic month++|
-|---|---|---|
+|hydro.mo||Hydrologic month++|  
+
 ^ date-time is number of seconds from 01 Jan 1970, 00:00, in either local time (SAST) or universal coordinated time (UTC).  
 ++ hydrologic year begins, in the southern hemisphere, in August, the first hydrologic month, and is labeled by the calendar month in which it ends.  
 
