@@ -6,7 +6,6 @@
 #' 
 #' @return data frame for hydromet station
 #' @export
-#' medike()
 medike <- function() {
       df <- readr::read_csv(RCurl::getURL("https://data.usaid.gov/resource/chfb-yzu5.csv"))
       offset <- 2 
