@@ -2,7 +2,7 @@
 % Please edit documentation in R/medike.R
 \name{medike}
 \alias{medike}
-\title{Import Medike Data}
+\title{Import Medike Nature Preserve Data}
 \usage{
 medike()
 }
