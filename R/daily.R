@@ -30,10 +30,16 @@ daily <- function(x) {
       temp <- array(NA, dim = (end.date-start.date+1))
       tmax <- temp
       tmin <- temp
-      for (i in 1:(end.date.t-start.date.t+1)) {
+      for (i in 1:(end.date-start.date+1)) {
             temp[i] <- mean(t[i,], na.rm = TRUE)
             tmax[i] <- max(t[i,], na.rm = TRUE)
             tmin[i] <- min(t[i,], na.rm = TRUE)
       }
-      daily <- data.frame(dt,temp,mint,maxtprcp)
+      for (i in 1:(end.date-start.date+1)) {
+            if (is.na(temp[i])) {temp[i] <- NA}
+            if (is.na(prcp[i])) {prcp[i] <- NA}
+            if (is.infinite(tmin[i])) {tmin[i] <- NA}
+            if (is.infinite(tmax[i])) {tmax[i] <- NA}
+      }
+      daily <- data.frame(dt,temp,tmin,tmax,prcp)
 }
