@@ -7,9 +7,13 @@
 #' @param apptoken from Socrata service
 #' @return data frame for hydromet station
 #' @export
-medike <- function(apptoken) {
-      df <- RSocrata::read.socrata("https://data.usaid.gov/resource/chfb-yzu5.csv",
-                                   app_token = apptoken)
+medike <- function(apptoken = "null") {
+      if (apptoken == "null") {
+            df <- readr::read_csv(RCurl::getURL("https://data.usaid.gov/resource/chfb-yzu5.csv"))
+      } else {
+            df <- RSocrata::read.socrata("https://data.usaid.gov/resource/chfb-yzu5.csv",
+                                         app_token = apptoken)
+      }
       offset <- 2 
       loc.dt <- as.numeric(lubridate::as_datetime(lubridate::ymd_hm(paste0(df$year, "-", df$mont, "-", df$dayn, "T", df$hour, ":", df$minu)))) 
       utc.dt <- as.numeric(lubridate::as_datetime(lubridate::ymd_hm(paste0(df$year, "-", df$mont, "-", df$dayn, "T", df$hour, ":", df$minu)))) - (offset * 3600) 
