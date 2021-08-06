@@ -49,8 +49,12 @@ The output of the data commands are in the form:
 ^ date-time is number of seconds from 01 Jan 1970, 00:00, in either local time (SAST) or universal coordinated time (UTC).  
 ++ hydrologic year begins, in the southern hemisphere, in August, the first hydrologic month, and is labeled by the calendar month in which it ends.  
 
-### Geographical Information  
+### Additional Information  
 The map of the locations is available at [www.duq.edu/limpopo](https://www.duq.edu/academics/schools/natural-and-environmental-sciences/academics/departments-and-programs/environmental-science-and-environmental-science-and-management/limpopo-resilience-lab/data) under data.  
+
+Data are archived at USAID's Development Data Library (DDL) at [data.usaid.gov](https://data.usaid.gov/).  Data, and data dictionary, can be found at the DDL for the sites:  
+- [Mutale Weir](https://data.usaid.gov/d/9ru6-b4nc)  
+- [Medike Nature Preserve](https://data.usaid.gov/Environment/Medike-Nature-Preserve/chfb-yzu5)  
 
 ### License  
 The license is provided in the repository.  The code may be used for any purpose; please credit this project and its funding source.  
