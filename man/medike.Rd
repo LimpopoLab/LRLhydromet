@@ -4,7 +4,10 @@
 \alias{medike}
 \title{Import Medike Nature Preserve Data}
 \usage{
-medike()
+medike(apptoken)
+}
+\arguments{
+\item{apptoken}{from Socrata service}
 }
 \value{
 data frame for hydromet station
