@@ -10,22 +10,30 @@
 #' @export
 daily <- function(x) {
       x$prcp <- dplyr::na_if(x$prcp, -9999)
-      start.date <- min(x$loc.dy)
-      end.date <- max(x$loc.dy)
+      start.date <- min(c(x$loc.dy,x$met.dy))
+      end.date <- max(c(x$loc.dy,x$met.dy))
       dt <- c(start.date:end.date)
-      prcp <- array(NA, dim = c((end.date-start.date+1), 96))
+      p <- array(NA, dim = c((end.date-start.date+1), 96))
       for (i in 1:(nrow(x))) {
             j <- (x$hour[i]*4) + (x$minu[i]/15) + 1
-            prcp[(loc.dy[i]-start.date+1),j] <- x$prcp[i]
+            p[(loc.dy[i]-start.date+1),j] <- x$prcp[i]
       }
-      p <- array(NA, dim = (end.date-start.date+1))
+      prcp <- array(NA, dim = (end.date-start.date+1))
       for (i in 1:(end.date-start.date+1)) {
-            p[i] <- mean(prcp[i,], na.rm = TRUE)
+            prcp[i] <- mean(p[i,], na.rm = TRUE)
       }
-      daily <- data.frame(dt,p)
-
-# Daily Minimum and Maximum Temperature, based on meteorologic day
-minmax <- data %>%
-      group_by(met.dy) %>%
-      summarize(mintemp_C = min(temp), maxtemp_C = max(temp))
+      t <- array(NA, dim = c((end.date-start.date+1), 96))
+      for (i in 1:(nrow(x))) {
+            j <- (x$hour[i]*4) + (x$minu[i]/15) + 1
+            t[(met.dy[i]-start.date+1),j] <- x$prcp[i]
+      }
+      temp <- array(NA, dim = (end.date-start.date+1))
+      tmax <- temp
+      tmin <- temp
+      for (i in 1:(end.date.t-start.date.t+1)) {
+            temp[i] <- mean(t[i,], na.rm = TRUE)
+            tmax[i] <- max(t[i,], na.rm = TRUE)
+            tmin[i] <- min(t[i,], na.rm = TRUE)
+      }
+      daily <- data.frame(dt,temp,mint,maxtprcp)
 }
