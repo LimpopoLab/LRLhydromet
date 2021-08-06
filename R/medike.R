@@ -1,4 +1,4 @@
-#' Import Medike Data
+#' Import Medike Nature Preserve Data
 #' 
 #' This function loads the Medike data and provides 
 #' some processing, will pass to analysis function 
