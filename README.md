@@ -17,7 +17,13 @@ To run, for example, the Medike Nature Preserve data command, assign the output 
 More information is available on [Tidyverse](https://www.tidyverse.org/) and [RCurl](https://cran.r-project.org/web/packages/RCurl/RCurl.pdf).
 
 ### Commands  
-- medike() # Medike Nature Preserve  
+#### Data Download  
+- mutale(app_token) # Mutale Weir  
+- medike(app_token) # Medike Nature Preserve  
+#### Data Analysis  
+- daily(x) # where x is the data output from one of the 
+#### Download Requirements  
+The Socrata system that USAID uses to manage their API requires a token to download the full datasets.  Individual users should obtain an application token from [USAID](https://data.usaid.gov/profile/edit/developer_settings).  
 
 ### Output  
 The output of the data commands are in the form:
