@@ -4,7 +4,7 @@
 \alias{medike}
 \title{Import Medike Nature Preserve Data}
 \usage{
-medike(apptoken)
+medike(apptoken = "null")
 }
 \arguments{
 \item{apptoken}{from Socrata service}
