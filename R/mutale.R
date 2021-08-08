@@ -4,10 +4,16 @@
 #' some processing, will pass to analysis function 
 #' for daily data
 #' 
+#' @param apptoken from Socrata service
 #' @return data frame for hydromet station
 #' @export
-mutale <- function() {
-      df <- readr::read_csv(RCurl::getURL("https://data.usaid.gov/resource/9ru6-b4nc.csv"))
+mutale <- function(apptoken = "null") {
+      if (apptoken == "null") {
+            df <- readr::read_csv(RCurl::getURL("https://data.usaid.gov/resource/9ru6-b4nc.csv"))
+      } else {
+            df <- RSocrata::read.socrata("https://data.usaid.gov/resource/9ru6-b4nc.csv",
+                                         app_token = apptoken)
+      }
       offset <- 2 
       loc.dt <- as.numeric(lubridate::as_datetime(lubridate::ymd_hm(paste0(df$year, "-", df$mont, "-", df$dayn, "T", df$hour, ":", df$minu)))) 
       utc.dt <- as.numeric(lubridate::as_datetime(lubridate::ymd_hm(paste0(df$year, "-", df$mont, "-", df$dayn, "T", df$hour, ":", df$minu)))) - (offset * 3600) 
