@@ -10,13 +10,12 @@ df <- df %>%
       na_if(-9999) %>%
       na_if(-8888) %>%
       na_if(-7777) %>%
-      select(-YEAR, -MONT, -DAYN, -HOUR, -MINU)
+      select(-year, -mont, -dayn, -hour, -minu)
 
 daily <- df %>%
       group_by(loc.dy) %>%
-      summarize(prcp = sum(prcp), temp = mean(temp), rhmd = mean(rhmd), srad = mean(srad), aprs = mean(aprs))
+      summarize(prcp = sum(prcp, na.rm = TRUE), temp = mean(temp, na.rm = TRUE), rhmd = mean(rhmd, na.rm = TRUE), srad = sum(srad, na.rm = TRUE), aprs = mean(aprs, na.rm = TRUE))
 
-wind <- df 
 
 # # May consider: 
 # rename(Precipitation_mm = PRCP,
