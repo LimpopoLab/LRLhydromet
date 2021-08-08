@@ -4,8 +4,11 @@
 #' load functions and processed them to daily 
 #' values. Maximum of 96 records per day or every
 #' 15 minutes.  Output day is in terms of lubridate 
-#' date, days since 01 Jan 1970.  
+#' date, days since 01 Jan 1970.  Daily precipitation
+#' is judged by day, temperature is based on 08:00 to 
+#' 08:00 the following morning.
 #' 
+#' @param x data frame from LRLhydromet import command
 #' @return daily data
 #' @export
 daily <- function(x) {

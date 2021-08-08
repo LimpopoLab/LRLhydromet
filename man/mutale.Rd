@@ -4,7 +4,10 @@
 \alias{mutale}
 \title{Import Mutale Weir Data}
 \usage{
-mutale()
+mutale(apptoken = "null")
+}
+\arguments{
+\item{apptoken}{from Socrata service}
 }
 \value{
 data frame for hydromet station
