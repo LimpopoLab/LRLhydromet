@@ -21,7 +21,8 @@ More information is available on [Tidyverse](https://www.tidyverse.org/) and [RC
 - mutale(app_token) # Mutale Weir  
 - medike(app_token) # Medike Nature Preserve  
 #### Data Analysis  
-- daily(x) # where x is the data output from one of the 
+- daily(x) # where x is the data output from one of the data import functions
+- wind(t, s, "D") # where t is the angle, s is the speed, and "D" or "R" indicates degrees or radians, respectively.
 #### Download Requirements  
 The Socrata system that USAID uses to manage their API requires a token to download the full datasets.  Individual users should obtain an application token from [USAID](https://data.usaid.gov/profile/edit/developer_settings).  
 
