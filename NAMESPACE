@@ -3,3 +3,4 @@
 export(daily)
 export(medike)
 export(mutale)
+export(wind)
