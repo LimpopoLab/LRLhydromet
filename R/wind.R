@@ -23,12 +23,12 @@ wind <- function(t, v, dr = "D") {
             direction <- t
       }
       if (dr == "R") {
-            v_bar <- mean(v)
             s <- v * sin(direction)
             s_bar <- mean(s, na.rm = TRUE)
             c <- v * cos(direction)
             c_bar <- mean(c, na.rm = TRUE)
             wind <- atan(s_bar/c_bar)
+            if (c_bar < 0) {wind <- wind +pi}
             if (final == "D") {
                   wind <- 360 * (wind / (2 * pi))
             }
